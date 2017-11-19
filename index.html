@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Interactive Trope Chart</title>
+        <meta charset="UTF-8">
+        
+        <!-- > Grab a style from bootswatch<!-->
+        <!--<link href="https://bootswatch.com/slate/bootstrap.css" rel="stylesheet"!-->
+        <link href="https://bootswatch.com/united/bootstrap.css" rel="stylesheet">
+    </head>
+    
+        
+    <!-- >Load in all the audio<!-->
+    <body style="margin: 5px; padding-right: 30px;width:50%">
+        <audio id="mercha"><source src="mercha.mp3" type="audio/mp3" ></audio>
+        <audio id="tipcha"><source src="tipcha.mp3" type="audio/mp3" ></audio>
+        <audio id="munach-etnachta"><source src="munach-etnachta.mp3" type="audio/mp3" ></audio>
+        <audio id="etnachta"><source src="etnachta.mp3" type="audio/mp3" ></audio>
+        <audio id="sof-pasuk"><source src="sof-pasuk.mp3" type="audio/mp3" ></audio>
+
+        <audio id="kadma"><source src="kadma.mp3" type="audio/mp3" ></audio>
+        <audio id="mapach"><source src="mapach.mp3" type="audio/mp3" ></audio>
+        <audio id="pashta"><source src="pashta.mp3" type="audio/mp3" ></audio>
+        <audio id="munach-katon"><source src="munach-katon.mp3" type="audio/mp3" ></audio>
+        <audio id="katon"><source src="katon.mp3" type="audio/mp3" ></audio>
+        
+        <audio id="munach-revii1"><source src="munach-revii1.mp3" type="audio/mp3" ></audio>
+        <audio id="munach-revii2"><source src="munach-revii2.mp3" type="audio/mp3" ></audio>
+        <audio id="revii"><source src="revii.mp3" type="audio/mp3" ></audio>
+        
+        <audio id="darga"><source src="darga.mp3" type="audio/mp3" ></audio>
+        <audio id="tevir"><source src="tevir.mp3" type="audio/mp3" ></audio>
+        
+        <audio id="telisha-gedolah"><source src="telisha-gedolah.mp3" type="audio/mp3" ></audio>
+        <audio id="telisha-katanah"><source src="telisha-katanah.mp3" type="audio/mp3" ></audio>
+        <audio id="gershayim"><source src="gershayim.mp3" type="audio/mp3" ></audio>
+        
+        <audio id="vazlah"><source src="vazlah.mp3" type="audio/mp3" ></audio>
+        <audio id="zakef-gadol"><source src="zakef-gadol.mp3" type="audio/mp3" ></audio>
+        <audio id="pazir"><source src="pazir.mp3" type="audio/mp3" ></audio>
+        <audio id="zarka"><source src="zarka.mp3" type="audio/mp3" ></audio>
+        <audio id="segol"><source src="segol.mp3" type="audio/mp3" ></audio>
+        
+        
+        <h1 style="text-align: center">Interactive Trope Sheet</h1>
+        <h3 style="text-align: center">Tropes Run Right to Left (click on a trope to hear it)</h3>
+        <div class="panel panel-default" style="text-align:right;padding:30px">
+            <!-- >use the ID quit button to link to a function to close the app<!-->
+                
+                <div class="panel panel-default" >
+                    <h3>Etnachta</h3>
+                    <a style="word-spacing: 10px">Etnachta Munach Tipcha Mercha</a>
+                    <p></p>
+                    <a id="button_etnachta" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֑</a>
+                    <a id="button_munach-etnachta" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                    <a id="button_tipcha" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֖</a>
+                    <a id="button_mercha" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֥</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>Sof Pasuk</h3>
+                    <a style="word-spacing: 15px">Sof-Pasuk Mercha Tipcha Mercha</a>
+                    <p></p>
+                    <a id="button_sof-pasuk" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">בֽ׃</a>
+                    <a id="button_mercha" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֥</a>
+                    <a id="button_tipcha" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֖</a>
+                    <a id="button_mercha" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֥</a>
+                </div>
+               <div class="panel panel-default" >
+                    <h3>Katon</h3>
+                    <a style="word-spacing: 15px">Katon Munach Pashta Mapach Kadma</a>
+                    <p></p>
+                    <a id="button_katon" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֔</a>
+                    <a id="button_munach-katon" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                    <a id="button_pashta" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֙</a>
+                    <a id="button_mapach" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֤</a>
+                    <a id="button_kadma" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֨</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>Revi'i</h3>
+                    <a style="word-spacing: 30px">Revi'i Munach Munach</a>
+                    <p></p>
+                    <a id="button_revii" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֗</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                    <a id="button_munach-revii1" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣׀</a>
+                </div>
+
+                <div class="panel panel-default" >
+                    <h3>Tevir</h3>
+                    <a style="word-spacing: 30px">Tevir Darga</a>
+                    <p></p>
+                    <a id="button_tevir" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֛</a>
+                    <a id="button_darga" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֧</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>Gershayim</h3>
+                    <a style="word-spacing: 30px">Gershayim</a>
+                    <p></p>
+                    <a id="button_gershayim" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֞</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>Telisha-Gedolah</h3>
+                    <a style="word-spacing: 30px">Telisha-Gedolah Munach</a>
+                    <p></p>
+                    <a id="button_telisha-gedolah" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֠</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>Telisha-Katanah</h3>
+                    <a style="word-spacing: 30px">Telisha-Katanah Munach</a>
+                    <p></p>
+                    <a id="button_telisha-katanah" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֩</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                </div>
+                <div class="panel panel-default" >
+                    <h3>V'azlah</h3>
+                    <a style="word-spacing: 30px">V'azlah Kadma</a>
+                    <p></p>
+                    <a id="button_vazlah" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֜</a>
+                    <a id="button_kadma" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֨</a>
+                </div>
+                 <div class="panel panel-default" >
+                    <h3>Zakef-Gadol</h3>
+                    <a style="word-spacing: 30px">Zakef-Gadol</a>
+                    <p></p>
+                    <a id="button_zakef-gadol" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֕</a>
+                </div>
+                 <div class="panel panel-default" >
+                    <h3>Pazir</h3>
+                    <a style="word-spacing: 30px">Pazir Munach</a>
+                    <p></p>
+                    <a id="button_pazir" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֡</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                </div>
+                 <div class="panel panel-default" >
+                    <h3>Segol</h3>
+                    <a style="word-spacing: 30px">Segol Munach Zarka Munach</a>
+                    <p></p>
+                    <a id="button_segol" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֒</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                    <a id="button_zarka" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֮</a>
+                    <a id="button_munach-revii2" style="font-size:50px" class="btn btn-default" onclick="onClick(this.id)">ב֣</a>
+                </div>
+        </div>
+
+        <script>
+            function onClick(item_id){
+                var id_audio = item_id.replace("button_","");
+                var audio = document.getElementById(id_audio);
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
